@@ -11,59 +11,83 @@
 - First Name, 
 - Last Name, 
 - Emp ID, 
+- Emp Email,
+- Emp Phone,
 - Gender, 
 - DOB, 
 - Address info, 
 - Expecting? etc.
+- Roles (lookup)
 
 2 ***Company*** 
+- ID
 - Name, 
-- Buildings
+- Parking Lots (lookup)
 
-3 ***Building*** 
-- Name, 
-- Address, 
-- Parking Lots
-
-4 ***Parking Lot*** 
+3 ***Parking Lot*** 
 - Address,
-- Parking Spots
+- Parking Spots (lookup)
 
-5 ***Parking Spot*** 
+4 ***Parking Spot*** 
+- Spot ID
 - Spot Number, 
-- Parking Lot, 
+- Parking Lot, (lookup) 
 - Floor
-- Distance from Entrances
+- Parking Spot Type (lookup)
+- Entrances?? (lookup)
 
-6 ***Parking Spot Type*** 
-- Small Vehicle, 
-- Medium Vehicle, 
-- Large Vehicle, 
-- Senior Spot, 
-- Women Spot, 
-- Senior Citizen, 
-- Expecting Women etc.
+5 ***Parking Spot Type*** 
+- ID
+- Type
+    - Small Vehicle, 
+    - Medium Vehicle, 
+    - Large Vehicle, 
+    - Senior Spot, 
+    - Women Spot, 
+    - Senior Citizen, 
+    - Expecting Women etc.
 
-7 ***Parking Lot Entrance*** 
-- Parking Lot, 
-- Entrance Address
+6 ***Parking Lot Entrance*** 
+- ID
+- Address
 
-8 ***Vehicle*** 
+7 ***Vehicle*** 
 - Vehicle No., 
 - Employee Id, 
-- Vehicle Type
+- Vehicle Type (lookup)
 
-9 ***Vehicle Type*** 
-- Small,
-- Mid, 
-- Large
+8 ***Vehicle Type*** 
+- ID
+- Type
+    - Small,
+    - Mid, 
+    - Large
 
-10 ***Roles*** 
-- Administrator, 
-- Employee
+9 ***Roles*** 
+- ID
+- Name
+    - Administrator, 
+    - Employee
+
+10 ***ParkingLog***
+-  ID
+-  Vehicle (lookup)
+-  Parking Spot (lookup)
+-  Time In
+-  Time Out
 
 ## Requirements ##
 ### Administrator ###
-RA001 - 
+- RA001 - Able to do CRUD ops on all
 
-RA002 - 
+### Employee ###
+- RE001 - Able to park in and park out
+
+- RE002 - Able to edit some info
+
+- RE003 - Able to Edit Vehicle Info
+
+- RE004 - Able to Edit some status values like expecting etc.
+
+- RE005 - Able to check the parking availability
+
